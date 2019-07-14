@@ -1,0 +1,188 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+/*头部*/
+header{
+    height: 44px;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 22px 55px;
+    overflow: hidden;
+}
+.logo{
+    display: block;
+    float: left;
+}
+.logo img{
+    width: 110px;
+    height: 44px;
+}
+.warning{
+    width: 880px;
+    line-height: 16px;
+    text-align: center;
+    margin: 0 auto;
+    border: solid 1px #ffb4a8;
+    background-color: #fef2f2;
+    color: #6C6C6C;
+    overflow: hidden;
+    padding: 6px 10px;
+    vertical-align:top;
+}
+.warning p{
+    float: none;
+    width: auto;
+    font-size: 12px;
+}
+.link{
+    float:right;
+    color: #666;
+    font-size: 12px;
+    text-decoration: none;
+    line-height: 44px;
+}
+.link img{
+    padding-top: 15px;
+    width: 18px;
+}
+.link span{
+    vertical-align:top;
+}
+.link:hover{
+    color:#f40;
+}
+/*内容*/
+#content{
+    background-image: url(../img/background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 600px;
+}
+.login-left a{
+    position: absolute;
+    width: 630px;
+    height: 440px;
+    left: 80px;
+    top: 80px;
+}
+.login-right{
+    width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    height: 600px;
+}
+.login-right>div{
+    position: absolute;
+    top: 120px;
+    right:60px;
+    width: 350px;
+    background-color: rgba(255,255,255,0.9);
+    width: 300px;
+    padding: 25px 25px 23px;
+    color: #6c6c6c;
+    margin: 0 auto;
+}
+.login-right>div>p{
+    height: 18px;
+    line-height: 18px;
+    font-size: 16px;
+    color: #3c3c3c;
+    margin-top: 9px;
+    padding-bottom: 8px;
+    font-weight: 700;
+}
+.login-code{
+    position: relative;
+    margin-top: 24px;
+    height: 140px;
+    text-align: center;
+}
+.login-code img{
+    width: 140px;
+    height: 140px;
+}
+.login-phone{
+    overflow: hidden;
+    width: 188px;
+    margin: 24px auto 0;
+}
+.login-phone img{
+    width: 34px;
+    float: left;
+    margin-right: 10px;
+}
+.login-phone>p{
+    vertical-align: top;
+    color: #9c9c9c;
+    font-size: 12px;
+}
+.login-phone a{
+    color: #f40;
+    text-decoration: none;
+}
+.login-footer{
+    margin-top: 25px;
+    overflow: hidden;
+    text-align: right;
+    font-size: 12px;
+}
+.login-footer a{
+    margin-right: 10px;
+    color: #6C6C6C;
+    text-decoration: none;
+}
+.login-footer a:hover{
+    color: #f40;
+}
+.login-psw>img{
+    position: absolute;
+    right: 55px;
+    top: 0px;
+}
+.login-psw>a>img{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+/*脚注*/
+footer{
+    margin: 60px auto 0;
+    width: 1200px;
+    font-size: 12px;
+}
+footer>div:first-child{
+     border-top: 1px solid #ddd;
+     border-bottom: 1px solid #ddd;
+     padding:7px 0px 8px 0px;
+     margin-bottom: 7px;
+ }
+footer div{
+    line-height: 27px;
+    overflow: hidden;
+    padding-bottom: 8px;
+}
+footer p a{
+    float: left;
+    margin: 0 4px;
+    text-decoration: none;
+    color: #6c6c6c;
+}
+footer p>em{
+    font-style: normal;
+    margin-left: 30px;
+    font-weight: 400;
+    color: #9c9c9c;
+    white-space: nowrap;
+}
+footer p>b,p>span{
+    font-style: normal;
+    float: left;
+    margin: 0 3px;
+    font-weight: 400;
+    color: #9c9c9c;
+}
+footer img{
+    width: 36px;
+}
