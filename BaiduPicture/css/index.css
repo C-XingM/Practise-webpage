@@ -1,0 +1,95 @@
+*{
+    /* 消除浏览器的影响*/
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background: url("../img/background.jpg");
+    /*设置背景图片大小 background-size: 100%;*/
+    background-size: 100%;
+}
+a{
+    text-decoration: none;
+}
+table{
+    width: 100%;
+    height: 100%;
+}
+/*顶部导航*/
+.nav{
+    float:right;
+}
+.nav td{
+    float: left;
+    padding: 5px 2px 5px 0px;
+}
+.nav a{
+    font-size: 11px;
+    color: #FFFFFF;
+}
+.nav span{
+    font-size: 11px;
+    color: #FFFFFF;
+}
+/*网页logo*/
+.logo td{
+    text-align: center;
+}
+.logo img{
+    width: 250px;
+    margin: 50px 0px 10px 0px ;
+}
+/*搜索框*/
+.search td{
+    text-align: center;
+    padding: 0px 0px 40px 0px;
+}
+.search input{
+    width: 450px;
+    width: 450px;
+    height: 33px;
+    /*input和button对不齐 input和button都加上vertical-align:top；*/
+    vertical-align: top;
+}
+.search button{
+    width: 90px;
+    height: 37px;
+    font-size: 13px;
+    color: #FFFFFF;
+    background-color: #38f;
+    /*input和button对不齐 input和button都加上vertical-align:top；*/
+    vertical-align: top;
+    border: #38f;;
+}
+/*图片*/
+.table-two{
+    width: 674px;
+    height: 272px;
+    margin: 0 auto;
+    /*半透明背景色  background-color:rgba(255,255,255,0.3);*/
+    background-color:rgba(255,255,255,0.3);
+    padding: 4px 4px 0px 4px;
+}
+.table-two img{
+    width: 130px;
+    height: 130px;
+    margin: 2px 2px 2px 2px;
+}
+/*脚注*/
+.foot td{
+    position: fixed;
+    bottom: 5px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+.foot a,span{
+    color: #FFFFFF;
+    font-size: 15px;
+    padding: 0px 2px 0px 0px;
+}
+/*设置背景图片大小 background-size: 100%;*/
+/* margin:0 auto; 与 text-aglin的区别*/
+/*底部导航栏   position: fixed;    bottom: 5px;   left: 0;right: 0;*/
+/*半透明背景色  background-color:rgba(255,255,255,0.3);*/
+/*input和button对不齐 vertical-align:top；*/
