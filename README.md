@@ -6,4 +6,3 @@
 ![百度图片首页图片](https://github.com/C-XingM/Practise-webpage/blob/master/BaiduPicture/%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87%E9%A6%96%E9%A1%B5.png)
 ## 爱情契约网站【LoveRecord】
 ![爱情契约网站首页图片](https://github.com/C-XingM/Practise-webpage/blob/master/LoveRecord/show.gif)
-<img src="https://github.com/C-XingM/Practise-webpage/blob/master/BaiduPicture/%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87%E9%A6%96%E9%A1%B5.png" width="200" height="200" alt="抖音小程序"/><br/>
