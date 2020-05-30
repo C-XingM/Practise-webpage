@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <!-- 为搜索引擎定义关键词 -->
+    <meta name="keywords" content="爱情, 情侣, 契约, 恋爱, 纪念日">
+    <!-- 为网页定义描述内容 -->
+    <meta name="description" content="情侣契约，记录爱情的开始，记录幸福的时刻">
+    <!-- 定义网页作者 -->
+    <meta name="author" content="顾七">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/x-icon" href="" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- 满屏爱心 -->
+    <canvas id="canvas" width="500" height="500">
+
+    </canvas>
+    <!-- 恋人文字 -->
+    <div class="container">
+        <p class="record meet"><span id="year">2015</span>年<span id="mouth">05</span>月<span id="day">01</span>日</p>
+        <p class="record"><span class="lovers" id="girlfriend">王小姐</span>与<span class="lovers" id="boyfriend">谢先生</span>
+        </p>
+        <p class="record distance">今天是我们相遇的第<span id="days">264</span>天</p>
+        <p class="record distance"><span id="hours">4</span>时<span id="minutes">24</span>分<span id="seconds">2</span>秒
+        </p>
+    </div>
+    <script type="text/javascript">
+        displayTime();
+        function displayTime() {
+            //获取储存在用户本地终端上的数据
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var name = ca[i].split('=');
+                switch (name[0].trim()) {
+                    case "girlfriend":
+                        document.getElementById("girlfriend").innerHTML = name[1];
+                        break;
+                    case "boyfriend":
+                        document.getElementById("boyfriend").innerHTML = name[1];
+                        break;
+                    case "lovedate":
+                        var date1 = name[1];//开始时间
+                        break;
+                    default:;
+                }
+            }
+            //计算时间
+            // var date1 = '2017/11/01 24:00:00'; 
+            var date2 = new Date(); //结束时间
+            var date3 = date2.getTime() - new Date(date1).getTime(); //时间差的毫秒数      
+
+            //------------------------------
+
+            //计算出相差天数
+            var days = Math.floor(date3 / (24 * 3600 * 1000));
+
+            //计算出小时数
+
+            var leave1 = date3 % (24 * 3600 * 1000); //计算天数后剩余的毫秒数
+            var hours = Math.floor(leave1 / (3600 * 1000));
+            //计算相差分钟数
+            var leave2 = leave1 % (3600 * 1000); //计算小时数后剩余的毫秒数
+            var minutes = Math.floor(leave2 / (60 * 1000));
+            //计算相差秒数
+            var leave3 = leave2 % (60 * 1000); //计算分钟数后剩余的毫秒数
+            var seconds = Math.round(leave3 / 1000);
+
+            document.getElementById("days").innerHTML = days;
+            document.getElementById("hours").innerHTML = hours <= 9 ? ("0" + hours) : hours;
+            document.getElementById("minutes").innerHTML = minutes <= 9 ? ("0" + minutes) : minutes;
+            document.getElementById("seconds").innerHTML = seconds <= 9 ? ("0" + seconds) : seconds;
+            setTimeout(displayTime, 1000);
+        }
+    </script>
+    <!-- 满屏爱心 -->
+    <script src='js/easeljs.min.js'></script>
+    <script src="js/canvas.js"></script>
+
+</body>
+
+</html>

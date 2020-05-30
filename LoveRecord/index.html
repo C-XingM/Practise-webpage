@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <!-- 为搜索引擎定义关键词 -->
+    <meta name="keywords" content="爱情, 情侣, 契约, 恋爱, 纪念日">
+    <!-- 为网页定义描述内容 -->
+    <meta name="description" content="情侣契约，记录爱情的开始，记录幸福的时刻">
+    <!-- 定义网页作者 -->
+    <meta name="author" content="顾七">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/x-icon" href="" />
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- 卡片正面 -->
+        <div class="card card1 index">
+            <span id="deed1" class="clicks">爱情契约</s'pan>
+        </div>
+        <!-- 卡片背面 -->
+        <div class="card card2">
+            <div id="deed2">
+                <img class="content-logo" src="logo.png" alt="logo">
+                <h1>爱情契约</h1>
+                <form  name="frm1" action="record.html" onsubmit="greeting()" >
+                    <!-- 只允许输入中文 -->
+                    <input type="text" name="girlfriend" onkeyup="value=value.replace(/[^\u4E00-\u9FA5]/g,'')" onpaste="value=value.replace(/[^\u4E00-\u9FA5]/g,'')" oncontextmenu = "value=value.replace(/[^\u4E00-\u9FA5]/g,'')" maxlength="10" placeholder="女生名字(中文)" required>
+                    <input type="text" name="boyfriend" onkeyup="value=value.replace(/[^\u4E00-\u9FA5]/g,'')" onpaste="value=value.replace(/[^\u4E00-\u9FA5]/g,'')" oncontextmenu = "value=value.replace(/[^\u4E00-\u9FA5]/g,'')" placeholder="男生名字(中文)" required>
+                    <!-- 限制日期选择范围 -->
+                    <input id="time" type="date" name="date" placeholder="相遇日期" required>
+                    <input type="submit" value="提交">
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+    <script>
+        var year = new Date().getFullYear();
+        var month = (new Date().getMonth()+1)>9?(new Date().getMonth()+1):"0"+(new Date().getMonth()+1);
+        var date = (new Date().getDate())>9?(new Date().getDate()):"0"+(new Date().getDate());
+        var max = year + "-" + month + "-" + date;
+        document.getElementById("time").setAttribute("max", max);
+        var b3 = document.getElementById("deed1");
+        //触摸按钮卡片翻转
+        b3.addEventListener("mouseover", function () {
+            document.getElementsByClassName("container")[0].style.WebkitTransform = "rotateY(180deg)";//卡片旋转
+            //两个绝对定位重叠，表示鼠标事件能“穿透”元素并且指定该元素“下面”的任何东西。
+            document.getElementById("deed1").classList.remove("clicks");
+            document.getElementById("deed2").classList.add("clicks");
+        });
+        //form提交事件
+        function greeting(){
+            //将表单内容储存在用户本地终端上的数据
+            document.cookie = "girlfriend="+document.forms["frm1"]["girlfriend"].value+";";
+            document.cookie = "boyfriend="+document.forms["frm1"]["boyfriend"].value+";";
+            document.cookie = "lovedate="+document.forms["frm1"]["date"].value+" 00:00:00;";
+            //document.cookie = "love="+girlfriend+boyfriend+date;
+        }   
+    </script>
+</body>
+
+</html>

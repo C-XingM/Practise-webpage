@@ -1,0 +1,178 @@
+html, body {
+  margin:0px;
+  padding:0px;
+	display: flex;
+  justify-content: center;
+	align-items: center;
+  background-color:#fff4ff;
+  font-family:sans-serif;
+  font-size:16px;
+  overflow:hidden;
+}
+
+
+p {
+  color:#aeb7c0;
+}
+canvas {
+	/* border: 25px solid hotpink; */
+	border-radius: 10px;
+  background-color: #fff4ff;
+}
+
+.container{
+  position: absolute;
+  z-index: 99999;
+}
+@font-face {
+  font-family: 'HYDiShengYing';
+  src: url('../HYDiShengYingXiongTiW.ttf');
+}
+
+.record {
+  font-family: 'HYDiShengYing';
+  font-size: 4vw;
+  line-height: 3vh;
+  color: rgb(13, 13, 14);
+  text-align: center;
+  letter-spacing: 10px;
+}
+
+.meet {
+  animation: hiddens 5s;
+  -webkit-animation: hiddens 5s;
+  /*Safari 与 Chrome*/
+  display: none;
+}
+
+/*从出现到消失*/
+@-webkit-keyframes hiddens {
+  0% {
+      opacity: 1;
+      display: block;
+  }
+
+  90% {
+      opacity: 1;
+      display: block;
+  }
+
+  100% {
+      opacity: 0;
+      display: none;
+  }
+}
+
+@keyframes hiddens {
+  0% {
+      opacity: 1;
+      display: block;
+  }
+
+  90% {
+      opacity: 1;
+      display: block;
+  }
+
+  100% {
+      opacity: 0;
+      display: none;
+  }
+}
+
+#girlfriend {
+  animation: fadeInLeft 5s;
+  -webkit-animation: fadeInLeft 5s;
+  /* Safari 与 Chrome */
+  display: inline-block;
+}
+
+/*从左到右进入*/
+@-webkit-keyframes fadeInLeft {
+  0% {
+      -webkit-transform: translateX(-1200px);
+  }
+
+  100% {
+      -webkit-transform: translateX(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+      transform: translateX(-1200px);
+  }
+
+  100% {
+      transform: translateX(0);
+  }
+}
+
+#boyfriend {
+  animation: fadeInRight 5s;
+  -webkit-animation: fadeInRight 5s;
+  /*Safari 与 Chrome*/
+  display: inline-block;
+}
+
+/*从右到左进入*/
+@-webkit-keyframes fadeInRight {
+  0% {
+      -webkit-transform: translateX(1200px);
+  }
+
+  100% {
+      -webkit-transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+      transform: translateX(1200px);
+  }
+
+  100% {
+      transform: translateX(0);
+  }
+}
+
+.distance {
+  animation: shows 10s;
+  -webkit-animation: shows 10s;
+  /*Safari 与 Chrome*/
+}
+
+/*从右到左进入*/
+@-webkit-keyframes shows {
+  0% {
+      opacity: 0;
+      display: none;
+  }
+
+  45% {
+      opacity: 0;
+      display: none;
+  }
+
+  100% {
+      opacity: 1;
+      display: block;
+  }
+}
+
+@keyframes shows {
+  0% {
+      opacity: 0;
+      display: none;
+  }
+
+  45% {
+      opacity: 0;
+      display: none;
+  }
+
+  100% {
+      opacity: 1;
+      display: block;
+  }
+}
